@@ -12,7 +12,7 @@
         font-family="monospace"
         font-size="48"
         fill="black">
-    00:00
+    00:00:00
   </text>
 
   <script type="application/ecmascript"><![CDATA[
