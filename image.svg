@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300"
+     height="100"
+     viewBox="0 0 300 100">
+
+  <text id="timeText"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="48"
+        fill="black">
+    00:00
+  </text>
+
+  <script type="application/ecmascript"><![CDATA[
+    function updateTime() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById("timeText").textContent =
+        hours + ":" + minutes;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  ]]></script>
+</svg>
